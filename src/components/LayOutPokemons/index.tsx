@@ -8,7 +8,7 @@ import CardPokemon from '../Card'
 const LayOutPokemonList = ({pokemonList, title}: PokemonListLayOut) => {
     
   return (
-    <Box sx={{mt: 10, m: 15}}>
+    <Box sx={{mt: 5, m: 10}}>
         <Typography 
           variant='h2'
           component={"h2"}

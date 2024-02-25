@@ -5,7 +5,7 @@ import { Link, Outlet } from "react-router-dom"
 const Navbar = () => {
   return (
     <>
-    <AppBar color="transparent" variant='outlined'  position='relative' sx={{width: "100vw", backgroundColor: "#3498DB"}}>
+    <AppBar elevation={4} color="transparent"   position='relative' sx={{width: "100vw", backgroundColor: "#3498DB"}}>
         <Container maxWidth={false} sx={{display: "flex", width: "100%"}}> 
             <Toolbar disableGutters sx={{display:"flex", justifyContent: "space-around"}}>
                 <Box>
@@ -29,8 +29,8 @@ const Navbar = () => {
             </Toolbar>
             <Box sx={{display: "flex", justifySelf: "end", width: "100%"}}>
                 {navBar.map((page: string, index: number)=>
-                    <Link style={{textDecoration: "none", color: "white", alignSelf: "center"}} to={`/${page == "Home" ? "": page}`}>
-                        <MenuItem key={index}> 
+                    <Link key={index} style={{textDecoration: "none", color: "white", alignSelf: "center"}} to={`/${page == "Home" ? "": page}`}>
+                        <MenuItem > 
                             {page}
                         </MenuItem>
                     </Link>

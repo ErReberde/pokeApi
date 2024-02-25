@@ -50,7 +50,7 @@ const PokemonList = () => {
 
     useEffect(()=>{
       if(selectorPokemon.length === 0){
-        getAllPokemonsFromApi(`${import.meta.env.VITE_URI_POKEAPI}pokemon?limit=100&offset=0"`)
+        getAllPokemonsFromApi(`pokemon?limit=100&offset=0"`)
       }else{
         setPokemons(selectorPokemon)
       }

@@ -44,7 +44,7 @@ export const removePokemonOnFavoriteList = (idItem:number)=>{
 
         let pokemonsList = JSON.parse(MyPokemons)
     
-        pokemonsList = [...pokemonsList.filter((id:number) => id != idItem)]
+        pokemonsList = [...pokemonsList.filter((pokemon:pokemonCard) => pokemon.id != idItem)]
         localStorage.removeItem(MY_FAVORITE_POKEMONS)
         localStorage.setItem(MY_FAVORITE_POKEMONS, JSON.stringify(pokemonsList))
     }

@@ -8,9 +8,6 @@ import { getPokemons } from "../../redux/store"
 import { savePokemonsAction } from "../../redux/actions"
 
 
-
-const URL_API = import.meta.env.VITE_URI_POKEAPI
-
 const PokemonDetails = () => {
 
   const [pokemonInfo, setPokemonInfo] = useState({})
@@ -20,7 +17,7 @@ const PokemonDetails = () => {
   const {id} = useParams()
 
   const getInfoPokemonById= async () => {
-    const {data} = await pokeApiFetch.get(`${URL_API}pokemon/${id}`)
+    const {data} = await pokeApiFetch.get(`pokemon/${id}`)
     setPokemonInfo(data)
     dispatch(savePokemonsAction(data))
   }
